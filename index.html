@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artify</title>
-    <!-- Css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Animation -->
-    <link rel="stylesheet" href="css/animation.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- JS -->
+	<script src="js/main.js"></script>
+	<script src="js/data/quote.js"></script>
+
+	<title>Artify</title>
 </head>
 <body>
-    <!-- Nav Bar -->
-    <nav class="slideInL">
-		<div class="searchBox">
-			<button type="submit">
-				<img src="images/logos/search.png" alt="">
-			</button>
-			<input type="text" name="search" id="searchBox" placeholder="Search new ideas,artists">
-		</div>
-		<input type="checkbox" id="hamburger">
-		<button class="hamburger" type="submit">
-			<img src="images/logos/hamburger.png" alt="">
-		</button>
-		<div class="links">
-			<a href="#home" class="active">Home</a>
-			<a href="#home">Commission</a>
-			<a href="#home">Community</a>
-			<a href="#home" class="mail">
-				Mail <span class="counter">+5</span>
-			</a>
-			<a href="#profile" onclick="Open('loginSignup')">Profile</a>
-		</div>
+	<nav>
+		<li>
+			<ul>
+				<a href="#home" data-page="Home">
+					<img src="images/logos/home2.png" alt="home">
+				</a>
+			</ul>
+			<ul>
+				<a href="#commission" data-page="Commission">
+					<img src="images/logos/com.png" alt="home">
+				</a>
+			</ul>
+			<ul>
+				<a href="#community" data-page="Community">
+					<img src="images/logos/community.png" alt="home">
+				</a>
+			</ul>
+			<ul>
+				<a href="#mail" data-page="Mail">
+					<img src="images/logos/mailbox.png" alt="home">
+				</a>
+			</ul>
+			<ul class="profile">
+				<a href="#profile" data-page="Sakuta">
+					<img src="images/profiles/profile2.jpg" alt="home">
+				</a>
+			</ul>
+		</li>
 	</nav>
+
+	<section class="hero">
+		<h1 class="quote"> hi</h1>
+	</section>
 </body>
 </html>
