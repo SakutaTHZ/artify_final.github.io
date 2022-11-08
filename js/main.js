@@ -27,3 +27,4 @@ function randomQuotes() {
     }, 80)
 }
 randomQuotes();
+

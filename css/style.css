@@ -1,127 +1,132 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: 0.5s ease-in-out;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: 0.5s ease-in-out;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 :root{
-    --mainColor:grey;
-    --fontWhite: white;
-    --fontBlack: black;
+	--mainColor:grey;
+	--fontWhite: white;
+	--fontBlack: black;
 }
 
 @keyframes loadInLeft {
-    0%{
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    100%{
-        opacity: 100%;
-        transform: translateX(0);
-    }
+	0%{
+		opacity: 0;
+		transform: translateX(100px);
+	}
+	100%{
+		opacity: 100%;
+		transform: translateX(0);
+	}
+}
+
+body{
+	overflow-x: hidden;
 }
 
 /* Center */
-nav,ul,li,ul a,.hero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav,ul,li,ul a,.hero,.imageCard,.cardProfile{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 /* glassy */
 ul a:before,nav{
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(2px);
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(45deg,rgba(67, 167, 255,0.4),rgba(255, 126, 238,0.4));
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(2px);
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+	background: linear-gradient(45deg,rgba(67, 167, 255,0.4),rgba(255, 126, 238,0.4));
 }
 
 /* NavBar */
 nav{
-    background: linear-gradient(rgba(67, 167, 255,0.4),rgba(255, 126, 238,0.4));
-    position: fixed;
-    height: 100vh;
-    right: 0;
-    top: 0;
-    padding: 10px 0;
-    animation: loadInLeft 1s ease-in-out;
+	background: linear-gradient(rgba(67, 167, 255,0.4),rgba(255, 126, 238,0.4));
+	position: fixed;
+	height: 100vh;
+	right: 0;
+	top: 0;
+	padding: 10px 0;
+	animation: loadInLeft 1s ease-in-out;
 }
 nav img{
-    width: 30px;
-    filter: invert(1) drop-shadow(0 0 3px rgba(0, 0, 0, 0.15));
+	width: 30px;
+	filter: invert(1) drop-shadow(0 0 3px rgba(0, 0, 0, 0.15));
 }
 
 ul{
-    flex-direction: column;
-    width: 55px;
-    aspect-ratio: 1/1;
+	flex-direction: column;
+	width: 55px;
+	aspect-ratio: 1/1;
 }
 ul a{
-    background: rgba(245, 245, 245, 0.396);
-    width: 40px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 3px 3px 3px rgba(63, 63, 63, 0.1),-3px -3px 3px rgba(255, 255, 255, 0.3);
-    }
+	background: rgba(245, 245, 245, 0.396);
+	width: 40px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 3px 3px 3px rgba(63, 63, 63, 0.1),-3px -3px 3px rgba(255, 255, 255, 0.3);
+	}
 ul:hover a{
-    box-shadow: 0 0 0 white,inset 3px 3px 3px rgba(63, 63, 63, 0.1),inset -3px -3px 3px rgba(255, 255, 255, 0.3);
+	box-shadow: 0 0 0 white,inset 3px 3px 3px rgba(63, 63, 63, 0.1),inset -3px -3px 3px rgba(255, 255, 255, 0.3);
 }
 a::before{
-    position: absolute;
-    content: attr(data-page);
-    right: 110%;
-    text-decoration: none;
-    color: var(--fontWhite);
-    min-width: 100px;
-    padding: 5px;
-    text-align: right;
-    border-radius: 10px;
-    transform: translateX(75px);
-    opacity: 0%;
-    transition: 0.5s ease-in-out;
+	position: absolute;
+	content: attr(data-page);
+	right: 110%;
+	text-decoration: none;
+	color: var(--fontWhite);
+	min-width: 100px;
+	padding: 5px;
+	text-align: right;
+	border-radius: 10px;
+	transform: translateX(75px);
+	opacity: 0%;
+	transition: 0.5s ease-in-out;
 }
 ul:hover a::before{
-    opacity: 100%;
-    transform: translateX(0);
+	opacity: 100%;
+	transform: translateX(0);
 }
 
 li{
-    justify-content: flex-start;
-    flex-direction: column;
-    height: 100%;
-    gap: 20px;
+	justify-content: flex-start;
+	flex-direction: column;
+	height: 100%;
+	gap: 20px;
 }
 
 .profile{
-    position: absolute;
-    bottom: 10px;
-    border-radius: 50%;
+	position: absolute;
+	bottom: 10px;
+	border-radius: 50%;
 }
 .profile a{
-    width: 80%;
-    border-radius: 50%;
-    border: 2px solid white;
+	width: 80%;
+	border-radius: 50%;
+	border: 2px solid white;
 }
 .profile img{
-    width: 100%;
-    filter: invert(0);
-    border-radius: 50%;
+	width: 100%;
+	filter: invert(0);
+	border-radius: 50%;
 }
 /* Hero Banner */
 .hero{
-    width: 100vw;
-    height: 70vh;
-    background-color: aquamarine;
-    background-image: url("../images/logos/banners/hero_banner2.png");
-    background-size: cover;
-    background-position: center;
+	width: 100vw;
+	height: 70vh;
+	background-color: aquamarine;
+	background-image: url("../images/logos/banners/hero_banner2.png");
+	background-size: cover;
+	background-attachment: fixed;
 }
 .quote{
-    display: flex;
+	position: absolute;
+	display: flex;
 	width: 80%;
 	background: rgba(66, 9, 58, 0.2);
 	padding: 20px;
@@ -129,38 +134,163 @@ li{
 	font-weight: bolder;
 	text-align: center;
 	justify-content: center;
-    color: var(--fontWhite);
+	color: var(--fontWhite);
 	user-select: none;
-    cursor: help;
-    border-radius: 20px;
-    backdrop-filter: blur(0.5px);
-    box-shadow: 0 0 0 white,inset 3px 3px 3px rgba(63, 63, 63, 0.1),inset -3px -3px 3px rgba(0, 0, 0, 0.);
+	cursor: help;
+	border-radius: 20px;
+	backdrop-filter: blur(0.5px);
+	box-shadow: 0 0 0 white,inset 3px 3px 3px rgba(63, 63, 63, 0.1),inset -3px -3px 3px rgba(0, 0, 0, 0.);
 }
 
+/* Posts */
+.gallery{
+	width: calc(100vw - 75px);
+	padding: 10px;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+  }
+  
+/* Create four equal columns that sits next to each other */
+.column {
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+}
+  
+.column img {
+	vertical-align: middle;
+	width: 100%;
+	pointer-events: none;
+}
+
+/* image Card Design */
+.card{
+	position: relative;
+	filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
+	margin: 20px 5px;
+}
+.card::before{
+	content: '';
+	position: absolute;
+	width: 90%;
+	height: 30%;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	border-radius: 20px;
+	transform: translateX(8px);
+	background: rgb(82, 143, 169);
+	transition: 0.5s ease-in-out;
+}
+.card:hover::before
+{
+	bottom: -10px;
+	width: 105.5%;
+	height: 104%;
+}
+.cardImage{
+	border-radius: 20px;
+}
+.cardProfile{
+	overflow: hidden;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+.cardDetails{
+	width: 100%;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.cardDetailsText{
+	width: 83%;
+}
+.cardDetailsText h3,.cardDetailsText p{
+	color: rgb(72, 72, 72);
+}
+.cardDetailsText h3{
+	font-size: 0.9em;
+}
+.cardDetailsText p{
+	font-size: 0.8em;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cardReactions{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	padding: 0 5px;
+	font-size: 0.8em;
+	height: 0;
+	opacity: 0%;
+	transform: translateY(-30px);
+	transition: 0s ease-out;
+}
+.card:hover .cardReactions{
+	opacity: 100%;
+	height: auto;
+	transform: translateY(0);
+	transition: 0.4s ease-in;
+}
+.cardReactions > span{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	padding: 1px 5px;
+	border-radius: 10px;
+	min-width: 30%;
+}
+.cardReactions > span >img{
+	width: 20px;
+} 
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+	.column {
+	  flex: 50%;
+	  max-width: 50%;
+	}
+}
 /* MObile View */
 @media only screen and (max-width: 500px) {
-    nav{
-        transform: translateX(56px);
-        animation: none;
-    }
-    nav::before{
-        content: '';
-        position: absolute;
-        width:30px;
-        height: 30px;
-        filter: invert(1);
-        background: url("../images/logos/hamburger.png");
-        background-size: contain;
-        top: 10px;
-        transform: translateX(-50px);
-    }
-    nav:hover{
-        transform: translateX(0);
-    }
-    nav:hover::before{
-        opacity: 0;
-    }
-    .hero{
-        height: 50vh;
-    }
+	nav{
+		transform: translateX(56px);
+		animation: none;
+	}
+	nav::before{
+		content: '';
+		position: absolute;
+		width:30px;
+		height: 30px;
+		filter: invert(1);
+		background: url("../images/logos/hamburger.png");
+		background-size: contain;
+		top: 10px;
+		transform: translateX(-50px);
+	}
+	nav:hover{
+		transform: translateX(0);
+	}
+	nav:hover::before{
+		opacity: 0;
+	}
+	.hero{
+		height: 40vh;
+	}
+	.column {
+		flex: 100%;
+		max-width: 100%;
+	}
+	.gallery{
+		width: 100vw;
+		padding: 40px;
+	}
 }
