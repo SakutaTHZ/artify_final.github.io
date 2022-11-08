@@ -182,13 +182,14 @@ li{
 	z-index: -1;
 	border-radius: 20px;
 	transform: translateX(8px);
-	background: rgb(82, 143, 169);
+	background: linear-gradient(rgba(67, 167, 255,0.4),rgba(255, 126, 238,0.4));
 	transition: 0.5s ease-in-out;
 }
 .card:hover::before
 {
 	bottom: -10px;
 	width: 105.5%;
+	background: linear-gradient(rgba(67, 167, 255,0.4),transparent,rgba(255, 126, 238,0.4));
 	height: 104%;
 }
 .cardImage{
@@ -247,6 +248,14 @@ li{
 	padding: 1px 5px;
 	border-radius: 10px;
 	min-width: 30%;
+}
+.cardReactions > span:hover{
+	background: rgb(255, 255, 255);
+	box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.cardReactions > span:focus{
+	background: rgb(155, 201, 255);
+	box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 .cardReactions > span >img{
 	width: 20px;
