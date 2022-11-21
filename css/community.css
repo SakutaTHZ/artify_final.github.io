@@ -1,0 +1,99 @@
+.communityhero{
+    height: 20vh;
+}
+
+.communityquote{
+    transform: scale(0.8);
+}
+
+.posts{
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postCard{
+    position: relative;
+    width: 500px;
+    min-height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    display: flex;
+}
+
+.reactSection{
+    position: absolute;
+    background: linear-gradient(rgba(67, 167, 255,0.4),rgba(255, 126, 238,0.4));
+    right: -50px;
+    width: 50px;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    gap: 3px;
+}
+.reactSection img{
+    width: 25px;
+    filter: invert(1);
+}
+.reactSection img:hover{
+    filter: invert(0);
+}
+
+.postSection{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.postSection > .head{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 10px;
+}
+.postSection > .head > .postProfile{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.postSection > .head > .ctime{
+    font-size: smaller;
+    opacity: 50%;
+}
+.postSection > .head > .follow{
+    position: absolute;
+    right: 10px;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: linear-gradient(45deg,rgba(67, 167, 255,0.4),rgba(255, 126, 238,0.4));
+    color: black;
+}
+.postSection > .head > .follow:hover{
+    background: linear-gradient(360deg,rgba(67, 167, 255,0.4),rgba(255, 126, 238,0.4));
+}
+.postSection > .head > .postProfile > img{
+    position: relative;
+    width: 35px;
+    border-radius: 50%;
+}
+.postSection > .head > .postProfile::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: lime;
+    box-shadow: 0 0 5px lime;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    border-radius: 50%;
+}
