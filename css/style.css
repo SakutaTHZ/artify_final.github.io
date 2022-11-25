@@ -52,6 +52,7 @@ nav{
 	top: 0;
 	padding: 10px 0;
 	animation: loadInLeft 1s ease-in-out;
+	z-index: 1000;
 }
 nav img{
 	width: 30px;

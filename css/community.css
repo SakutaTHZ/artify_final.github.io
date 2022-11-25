@@ -10,9 +10,9 @@
     width: 100%;
     min-height: 20vh;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding-left: 50px;
+    flex-direction: column;
 }
 
 .postCard{
@@ -105,8 +105,42 @@
 }
 
 .postBody{
-    background-color: aqua;
+    position: relative;
+    background: rgba(66, 9, 58, 0.1);
     width: 95%;
     min-height: 100px;
     margin: 10px 0 10px 0;
+    border-radius: 10px;
+    padding: 5px 10px 5px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.postBody::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateX(-10px);
+}
+.postTitle{
+    font-size: 1.5em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.postImages{
+    width: 100%;
+}
+.postImages>img{
+    height: 200px;
+}
+
+@media only screen and (max-width: 700px){
+    .posts{
+        transform: translateX(-25px);
+        justify-content: start;
+    }
+    .postCard{
+        width: 80vw;
+    }
 }

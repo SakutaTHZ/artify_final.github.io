@@ -62,9 +62,8 @@ function genGallery(){
                     </span>
                 </div>
 			`
-        console.log(index);
-	    document.querySelector(`#column${index}`).appendChild(div);
-        index = index <= 4 ? index+1 : 1;
+	    document.getElementById(`column${index}`).appendChild(div);
+        index = index <= 3 ? index+1 : 1;
     }
 }
 genGallery();
