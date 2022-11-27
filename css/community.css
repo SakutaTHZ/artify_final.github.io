@@ -50,7 +50,7 @@
 .postSection{
     position: relative;
     width: 100%;
-    min-height: 100%;
+    min-height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,7 +108,7 @@
     position: relative;
     background: rgba(66, 9, 58, 0.1);
     width: 95%;
-    min-height: 100px;
+    min-height: 50px;
     margin: 10px 0 10px 0;
     border-radius: 10px;
     padding: 5px 10px 5px 20px;
@@ -120,10 +120,32 @@
     content: '';
     position: absolute;
     width: 1px;
-    height: 90%;
-    background-color: rgba(0, 0, 0, 0.5);
+    top: 5%;
+    height: 85%;
+    background-color: rgba(0, 0, 0, 0.2);
     transform: translateX(-10px);
 }
+.postBody > textarea{
+    width:100%;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 1em;
+    resize: vertical;
+}
+.editOptions{
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+.editButton{
+    border: 0;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border-radius: 10px;
+    background: linear-gradient(45deg,rgba(67, 167, 255,0.4),rgba(255, 126, 238,0.4));
+}
+
 .postTitle{
     font-size: 1.5em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
